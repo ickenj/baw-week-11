@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Matt Groening's favorite Simpson episodes</h2>
+	<ol id="theList">
+		<li id="7F06">Bart the Daredevil</li>
+		<li id="7G11">Life on the Fast Lane</li>
+		<li id="3F20">Much Apu About Nothing</li>
+		<li id="8F18">A Streetcar Named Marge</li>
+		<li id="4F18">In Marge We Trust</li>
+		<li id="4F19">Homer&lsquo;s Enemy</li>
+		<li id="4F02">Treehouse of Horror VII</li>
+		<li id="5F18">Natural Born Kissers</li>
+		<li id="7G12">Krusty Gets Busted</li>
+		<li id="7G04">There&lsquo;s No Disgrace Like Home</li>
+	</ol>
+	<fieldset>
+		<legend>List Manager</legend>
+		<form>
+			<label for="getInput">Title:</label> <input type="text" id="getInput" />
+			<input type="button" value="Add" onclick="addShow();" /><br />
+			<input type="reset" value="Reset" />
+		</form>
+	</fieldset>
+	<fieldset>
+		<legend>Display Manager</legend>
+		<label for="color1">Color #1:</label> <input type="color" id="color1"
+			value="yellow"><br /> <label for="color2">Color #2:</label>
+		<input type="color" id="color2" value="limeGreen"><br />
+		<button type="button" onclick="setColors(color1,color2);”>Color</button>
+</fieldset>
+<script>
+function addShow() {
+	// Get Input from User
+	var text = document.getElementById("getInput").value;	
+	
+	// Create new DOM list node
+	var node = document.createElement( "li");
+	
+	// Add new show text to DOM to node
+	node.innerHTML = text; 
+	 
+	// Append new show at end of list
+	// document.getElementById("theList").appendChild(node);
+	
+	// Append new show after Much Adu Abount Nothing
+	var place = document.getElementById("8F18");
+	document.getElementById("theList").innerBefore(node,place);
+} // end of Add Show
+
+function setColors() {
+	// Get number of rows in array
+	var rows = document.getElementById("theList").getElementsByTagName("li");
+	
+	// Get color inputs from user in array
+	var colors = [color1.value, color2.value];
+	
+	// Color odd and even rows
+	for( var i=1; i<rows.length; i++ ) {
+		rows[i].style.backgroundColor = colors[i % 2];
+} // end of Set Color
+</script>
+
+</body>
+</html>

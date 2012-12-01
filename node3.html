@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 3</title>
+<script>
+/* Replace image by moving sideways on the Dom tree using previous Sibling property */
+
+function changeNode() {
+	var dancing = document.getElementById('last');
+	dancing.parentNode.removeChild(dancing);
+}
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif" id="last"></span>
+<br />
+<button onclick="changeNode();">Execute</button>
+</body>
+
+</html>

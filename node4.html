@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 4</title>
+<script>
+/* Append existing child to new parent */
+
+function changeNode() {
+	var dancing = document.getElementById('bottom'); //source 
+	var dancing = document.getElementById('top'); //target 
+	leaning.appendChild(dancing).lastChild;
+}
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif">
+	<img src="images/evilHomer_L.gif">
+	<img src="images/evilHomer_L.gif" id="last"></span>
+<br />
+<span id="bottom"><img src="images/evilHomer_R.gif"></span>
+<br />
+<button onclick="changeNode();">Execute</button>
+</body>
+
+</html>

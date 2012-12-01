@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 6</title>
+<script>
+/* Change content from image to text using innerHTML */
+
+function changeNode() {
+	var dancing = document.getElementById('bottom');
+	dancing.innerHTML = '<p>Dancing Homer</p>';
+}
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif" id="last"></span>
+<br />
+<span id="bottom"><img src="images/evilHomer_R.gif"></span>
+<button onclick="changeNode();">Execute</button>
+</body>
+
+</html>

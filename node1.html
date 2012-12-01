@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 3</title>
+<script>
+/* Replace image using childnode property */
+
+function changeNode() {
+	var dancing = document.getElementById('top');
+	dancing.childNodes[1].src='images/evilHomer_R.gif';
+}
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif"><img src="images/evilHomer_L.gif"></span>
+<br />
+<button onclick="changeNode();">Execute</button>
+</body>
+
+</html>
